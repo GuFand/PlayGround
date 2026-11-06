@@ -16,3 +16,14 @@
 - 👤 [Explore the creator's projects](https://go.ondev.store/GuFand).
 - 🌍 [Create with OMGithub](https://go.ondev.store/).
 <!-- omgithub:readme:end -->
+
+## Ninja Konoha — Misi Hokage
+
+A complete, browser-playable 2D platformer starring Naruto. Open `index.html` in a browser (or serve this folder with any static web server) to play.
+
+- **Move:** `A` / `D` or `←` / `→`
+- **Jump:** `Space`, `W`, or `↑`
+- **Pause:** `Esc` or `P`
+- **Touch:** on-screen movement and jump buttons on touch devices
+
+Collect coins, jump on enemy ninjas, cross the gaps, and reach the village gate.

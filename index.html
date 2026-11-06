@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#101a32" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='10' fill='%23ff8c35'/%3E%3Ctext x='20' y='29' text-anchor='middle' font-size='25' fill='%231a243c'%3E%E8%91%89%3C/text%3E%3C/svg%3E" />
+  <title>Ninja Konoha — Misi Hokage</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Nunito:wght@600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Ninja Konoha home"><span class="brand-mark">葉</span><span>NINJA<span class="brand-light">/KONOHA</span></span></a>
+      <div class="chapter"><span class="chapter-dot"></span> PETUALANGAN MINI <span class="chapter-divider">/</span> BAB 01</div>
+      <button class="sound-btn" id="soundBtn" aria-label="Suara aktif" title="Aktif/nonaktifkan suara"><span id="soundIcon">♫</span></button>
+    </header>
+
+    <section class="game-wrap" aria-label="Permainan platformer Ninja Konoha">
+      <div class="game-frame">
+        <canvas id="game" width="960" height="540" aria-label="Game platformer 2D"></canvas>
+        <div class="hud" id="hud" aria-live="polite">
+          <div class="hud-left">
+            <div class="hud-pill lives"><span class="hud-icon">♥</span><span id="lives">3</span></div>
+            <div class="hud-pill coins"><span class="coin-icon">●</span><span id="coinCount">00</span></div>
+          </div>
+          <div class="mission"><span class="mission-kicker">MISI</span><span id="missionText">TEMUKAN GULUNGAN</span></div>
+          <button class="pause-btn" id="pauseBtn" aria-label="Jeda permainan">Ⅱ</button>
+        </div>
+        <section class="screen" id="startScreen">
+          <div class="screen-card intro-card">
+            <div class="eyebrow"><span></span> DESA DAUN TERSEMBUNYI</div>
+            <h1>NINJA<br><em>KONOHA</em></h1>
+            <p class="intro-copy">Satu gulungan penting hilang! Bantu Naruto melewati lembah, kumpulkan koin, dan pulang sebelum matahari terbenam.</p>
+            <button class="primary-btn" id="startBtn">MULAI PETUALANGAN <span>↗</span></button>
+            <div class="key-hint">GERAK <kbd>A</kbd><kbd>D</kbd> <span>LOMPAT</span><kbd>SPACE</kbd></div>
+          </div>
+          <div class="screen-stamp">KONOHA<br><b>忍</b></div>
+        </section>
+        <div class="mobile-controls" aria-label="Kontrol sentuh">
+          <button data-control="left" aria-label="Kiri">←</button><button data-control="right" aria-label="Kanan">→</button><button class="jump-touch" data-control="jump" aria-label="Lompat">↑</button>
+        </div>
+        <section class="screen hidden" id="pauseScreen">
+          <div class="screen-card end-card">
+            <div class="eyebrow"><span></span> ISTIRAHAT SEBENTAR</div>
+            <h2>SIAP<br><em>LANJUT?</em></h2>
+            <p>Petualanganmu menunggu, ninja.</p>
+            <button class="primary-btn" id="resumeBtn">LANJUTKAN <span>▶</span></button>
+          </div>
+        </section>
+        <section class="screen hidden" id="endScreen">
+          <div class="screen-card end-card">
+            <div class="eyebrow" id="endEyebrow"><span></span> MISI SELESAI</div>
+            <h2 id="endTitle">KERJA BAGUS,<br><em>NARUTO!</em></h2>
+            <p id="endCopy">Gulungan sudah kembali ke desa.</p>
+            <div class="final-score"><span>KOIN TERKUMPUL</span><b id="finalCoins">00</b></div>
+            <button class="primary-btn" id="restartBtn">MAIN LAGI <span>↻</span></button>
+          </div>
+        </section>
+        <div class="toast" id="toast">+1 KOIN</div>
+      </div>
+      <footer class="game-footer">
+        <div class="footer-tip"><span class="tip-spark">✦</span><span id="tipText">Lompat di atas musuh untuk mengalahkannya.</span></div>
+        <div class="controls-legend"><span><kbd>←</kbd><kbd>→</kbd> / <kbd>A</kbd><kbd>D</kbd> GERAK</span><i></i><span><kbd>SPACE</kbd> LOMPAT</span></div>
+      </footer>
+    </section>
+    <footer class="page-footer"><span>DIBUAT UNTUK PARA NINJA MUDA</span><span class="footer-seal">木ノ葉</span><span>JANGAN LUPA BAWA RAMEN 🍜</span></footer>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
